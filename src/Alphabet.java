@@ -13,31 +13,15 @@ public class Alphabet {
         this.w = w;
     }
 
-    public int getW() {
-        return w;
-    }
-
     public void setA(int a) {
         this.a = a;
-    }
-
-    public int getA() {
-        return a;
     }
 
     public void setS(int s) {
         this.s = s;
     }
 
-    public int getS() {
-        return s;
-    }
-
     public void setD(int d) {
         this.d = d;
-    }
-
-    public int getD() {
-        return d;
     }
 }
