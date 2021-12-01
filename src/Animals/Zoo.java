@@ -19,6 +19,15 @@ public class Zoo {
             System.out.println(a);
         }
     }
+
+    public void sound(){
+        for(Object a: animals){
+            if (a instanceof Soundable) { // проверка реализации интерфейса Soundable
+                ((Soundable)a).sound(); // приведение к Soundable
+            }
+        }
+    }
+
     public void change(Object a, int i){
         if (i >= 0 && i < animals.length)
             animals[i] = a;

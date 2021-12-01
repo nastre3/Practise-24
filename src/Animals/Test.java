@@ -17,7 +17,8 @@ public class Test {
         zoo.print();
 */
         Zoo zoo = new Zoo();
-        zoo.change(new Dog(), 2);
+        zoo.change(new Reptile(), 2);
         System.out.println(zoo);
+        zoo.sound();
     }
 }

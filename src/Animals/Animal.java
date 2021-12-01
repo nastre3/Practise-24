@@ -1,6 +1,6 @@
 package Animals;
 
-public class Animal {
+abstract public class Animal {
     public void print(){
         System.out.println(this);
     }
