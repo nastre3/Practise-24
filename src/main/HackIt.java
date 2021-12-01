@@ -1,3 +1,5 @@
+package main;
+
 import anotherfirm.HiddenClass;
 
 public class HackIt {

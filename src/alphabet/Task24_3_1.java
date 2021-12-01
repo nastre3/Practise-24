@@ -1,7 +1,9 @@
+package alphabet;
+
 public class Task24_3_1 {
     public static void main(String[] args) {
         /*
-Make Alphabet class,
+Make alphabet.Alphabet class,
 so that this code and *similar ones* work correctly
 */
         Alphabet alphabet = new Alphabet();

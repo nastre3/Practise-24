@@ -1,6 +1,7 @@
-
+package battle;
 
 public class Zombie extends Monster {
+
     public static String scream = "Raaaauuughhhh";
 
     public Zombie(String name) {
@@ -8,23 +9,25 @@ public class Zombie extends Monster {
     }
 
     @Override
-    public void growl() {
+    public void growl(){
         System.out.print(scream);
         super.growl();
     }
 
-    public void growl(boolean isGrowl) {
-        if (isGrowl) {
+    public void growl(boolean loud){
+        if (!loud) {
+            growl();
+        }
+        else {
             System.out.print(scream.toUpperCase());
             super.growl();
-        } else {
-            growl();
         }
     }
 
     @Override
-    public void attack() {
+    public void attack(){
         super.attack();
         growl();
     }
+
 }
