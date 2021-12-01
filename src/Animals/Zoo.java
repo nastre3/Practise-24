@@ -1,10 +1,10 @@
 package Animals;
 
 public class Zoo {
-    Animal[] animals;
+    Object[] animals;
     public Zoo(){
         // в этой строке мы еще не создаем животных
-        animals = new Animal[3];
+        animals = new Object[3];
         // наполняем массив конкретными животными
         animals[0] = new Dog();
         animals[1] = new Cat();
@@ -13,11 +13,11 @@ public class Zoo {
     public void print(){
         // Используем цикл!
         // Каждое животное выводится по-своему!
-        for( Animal a: animals){
-            a.print();
+        for( Object a: animals){
+            System.out.println(a);
         }
     }
-    public void change(Animal a, int i){
+    public void change(Object a, int i){
         if (i >= 0 && i < animals.length)
             animals[i] = a;
     }
