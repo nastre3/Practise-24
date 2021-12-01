@@ -1,5 +1,7 @@
 package Animals;
 
+import java.util.Arrays;
+
 public class Zoo {
     Object[] animals;
     public Zoo(){
@@ -20,5 +22,10 @@ public class Zoo {
     public void change(Object a, int i){
         if (i >= 0 && i < animals.length)
             animals[i] = a;
+    }
+
+    @Override
+    public String toString() {
+        return "Zoo: " + Arrays.toString(animals);
     }
 }
