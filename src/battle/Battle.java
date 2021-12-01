@@ -25,7 +25,7 @@ public class Battle {
     public void run() {
         for (Monster a : monsters) {
             if (a != null) {
-                a.attack();
+                //a.attack();
             }
         }
     }
