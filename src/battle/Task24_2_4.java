@@ -1,27 +1,25 @@
 package battle;
 
 public class Task24_2_4 {
-    public static void main(String[] args) {
-        /*
+    public static void main(String[] args) {/*
 
-Make class Monster abstract
+Make class Entity - the superclass for all entities
 Fix class Zobie and ...
 
 */
 
         Battle battle = new Battle();
         battle.add(new Zombie("Alice"));
-        battle.add(new Zombie("Bob"));
-        battle.add(new Zombie("Eve"));
+        battle.add(new Human("Vasiliy"));
         battle.add(new GiantSnake("Kaa"));
-        battle.add(new GiantSnake("Son of Kaa"));
+        battle.add(new Tower("Big Ben"));
 
         battle.start();
 
 
 /*
 
-                       ...and The Battle starts!
+                       ...and The GreatBattle starts!
 
 */
     }

@@ -5,34 +5,50 @@ package battle;
 запускает метод attack() для каждого из монстров по порядку добавления по одному разу.
  */
 
+import java.util.Random;
+
 public class Battle {
     final static private int MAX = 5;
-    private Monster[] monsters;
+
+    private Entity[] entities;
     private int n = 0;
 
-    Battle() {
-        monsters = new Monster[MAX];
+    Battle(){
+        entities = new Entity[MAX];
     }
 
-    public void add(Monster monster) {
+    public void add(Entity entity){
         if (n < MAX) {
-            monsters[n++] = monster;
-        } else {
-            System.out.println("No more monsters!");
+            entities[n++] = entity;
+        }
+        else{
+            System.out.println("No more members!");
         }
     }
 
-    public void run() {
-        for (Monster a : monsters) {
-            if (a != null) {
-                //a.attack();
+    public void run(){
+        Random random = new Random();
+        int destroyed = 0;
+        while (destroyed != n - 1){
+            Entity fighter = entities[random.nextInt(n)];
+            Entity victim = entities[random.nextInt(n)];
+            //find non destroyed Fighter and his victim
+            while (fighter == null || victim == null || !(fighter instanceof Fighter) || fighter == victim){
+                victim = entities[random.nextInt(n)];
+                fighter = entities[random.nextInt(n)];
+            }
+            ((Fighter)fighter).attack(victim);
+            if (victim.isDestroyed()){
+                victim = null;
+                destroyed++;
             }
         }
+
+        System.out.println("The Great Battle is finished");
+
     }
 
-    public void start() {
+    public void start(){
         run();
     }
-
-
 }

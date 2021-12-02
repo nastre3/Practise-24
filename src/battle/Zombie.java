@@ -1,33 +1,21 @@
 package battle;
 
-public class Zombie extends Monster {
-
-    public static String scream = "Raaaauuughhhh";
-
+public class Zombie extends Monster implements Fighter {
     public Zombie(String name) {
         super(name + " the Zombie", 5);
     }
 
-    @Override
     public void growl(){
-        System.out.print(scream);
-        super.growl();
-    }
-
-    public void growl(boolean loud){
-        if (!loud) {
-            growl();
-        }
-        else {
-            System.out.print(scream.toUpperCase());
-            super.growl();
-        }
+        System.out.println("Raaaauuughhhh");
     }
 
     @Override
-    public void attack(Monster monster){
-        //super.attack();
-        growl();
+    public void attack(Entity entity) {
+        System.out.println(entity + " attacked!");
     }
 
+    @Override
+    public void attack(Monster monster) {
+
+    }
 }
