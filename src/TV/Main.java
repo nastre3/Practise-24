@@ -2,8 +2,26 @@ package TV;
 
 class TVset{
 
-    int channel = 5;
-    boolean isOn;
+    private int channel = 5;
+    private boolean isOn;
+    private Remote remote = new Remote();
+
+    public Remote getRemote(){
+        return remote;
+    }
+
+    class Remote{
+
+        public void setChannel(int channel){
+            TVset.this.channel = channel;
+        }
+        public void turnOn(){
+            isOn = true;
+        }
+        public void turnOff(){
+            isOn = false;
+        }
+    }
 
     public String toString(){
         if (!isOn){
@@ -13,32 +31,11 @@ class TVset{
     }
 }
 
-class Remote{
-
-    private TVset tvSet;
-
-    public void setTVset(TVset tvSet){
-        this.tvSet = tvSet;
-    }
-    public void setChannel(int channel){
-        tvSet.channel = channel;
-    }
-    public void turnOn(){
-        tvSet.isOn = true;
-    }
-    public void turnOff(){
-        tvSet.isOn = false;
-    }
-}
-
-
 public class Main {
 
     public static void main(String[] args) {
-
         TVset tv = new TVset();
-        Remote remote = new Remote();
-        remote.setTVset(tv);
+        TVset.Remote remote = tv.getRemote();
         System.out.println(tv);
         remote.turnOn();
         System.out.println(tv);
@@ -49,3 +46,4 @@ public class Main {
 
     }
 }
+
