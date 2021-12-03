@@ -5,12 +5,9 @@ import javax.swing.JFrame;
 
 public class Main {
     public static void main(String[] args) {
-        // создаем окно
-        JFrame jf = new JFrame();
-        // устанавливаем ему размеры
-        jf.setSize(400, 300);
-        // и показываем его
+        JFrame jf = new JFrame(); // создаем окно
+        jf.setSize(400, 300); // устанавливаем ему размеры
         jf.addMouseListener(new SimpleClickListener());
-        jf.setVisible(true);
+        jf.setVisible(true); // и показываем его
     }
 }

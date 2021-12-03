@@ -7,7 +7,7 @@ class SimpleClickListener implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        System.out.println("Clicked аt " + e.getX() + "," + e.getY());
+        System.out.println("Clicked аt " + e.getX() + "," + e.getY()); // коордитаты нажатия мыши
     }
 
     @Override
