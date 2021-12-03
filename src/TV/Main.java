@@ -13,7 +13,7 @@ class TVset{
     class Remote{
 
         public void setChannel(int channel){
-            TVset.this.channel = channel;
+            TVset.this.channel = channel; // обращение к переменной внешнего класса с помощью констуркции Outerclass.this
         }
         public void turnOn(){
             isOn = true;
@@ -34,10 +34,10 @@ class TVset{
 public class Main {
 
     public static void main(String[] args) {
-        TVset tv = new TVset();
-        TVset.Remote remote = tv.getRemote();
+        TVset tv = new TVset(); // покупаем телевизор
+        TVset.Remote remote = tv.getRemote(); // и берем из коробки новенький пульт (он входит в комплект!) - создаем объект внутр. класса конструкцией outerObject.new InnerClass().
         System.out.println(tv);
-        remote.turnOn();
+        remote.turnOn(); // и сразу начинаем пользоваться
         System.out.println(tv);
         remote.setChannel(2);
         System.out.println(tv);
