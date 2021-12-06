@@ -6,13 +6,13 @@ import java.awt.event.MouseEvent;
 
 public class MyFrame extends JFrame {
     public static void main(String[] args) {
-        MyFrame i = new MyFrame();
+        new MyFrame();
     }
 
     public MyFrame() {
         setSize(400, 300);
         setVisible(true);
-        addMouseListener(new MouseAdapter() {
+        addMouseListener(new MouseAdapter() { // создание внутреннего анонимного класса
             @Override
             public void mousePressed(MouseEvent e) {
                 setLocation(e.getXOnScreen() - getWidth() / 2,
