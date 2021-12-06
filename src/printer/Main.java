@@ -14,7 +14,13 @@ which add to the beginning of the line two astericks ("** ... **")
         CoolPrinter.add("I love you.");
         CoolPrinter.add("Three, four,");
         CoolPrinter.add("Touch the floor.");
-        CoolPrinter.print(/*pass anonymous Formatter here*/);
+        CoolPrinter.print(new Formatter() {
+            @Override
+            public String format(String s){
+                return "** " + s + " **";
+            }
+        });
+
 
 /*
 This fragment of code has to output
