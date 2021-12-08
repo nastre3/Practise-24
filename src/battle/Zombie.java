@@ -11,11 +11,14 @@ public class Zombie extends Monster implements Fighter {
 
     @Override
     public void attack(Entity entity) {
-        System.out.println(entity + " attacked!");
+        entity.damage(getForce());
+        //growl();
+        System.out.println(entity.name + " attacked!");
     }
 
     @Override
     public void attack(Monster monster) {
-
+        monster.damage(getForce());
+        growl();
     }
 }

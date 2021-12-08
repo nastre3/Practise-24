@@ -2,7 +2,7 @@ package battle;
 
 abstract public class Entity {
     protected String name;
-    private int hp = 15;
+    private int hp = 100;
     private boolean destroyed = false;
 
     public Entity(String name) {
@@ -17,7 +17,7 @@ abstract public class Entity {
         hp -= dhp;
         if (hp < 0){
             destroyed = true;
-            System.out.println("Monster " + name + " was destroyed");
+            System.out.println("Entity " + name + " was destroyed");
             return true;
         }
         return false;
