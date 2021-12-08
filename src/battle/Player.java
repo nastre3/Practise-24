@@ -4,10 +4,12 @@ public class Player extends Human {
     public Backpack backpack;
 
     public Player(String name) {
-        super(name);
+        super(name + " the Player");
+        backpack = new Backpack();
     }
 
     public void take(String smth) {
+        backpack.put(smth);
     }
 
     class Backpack{
